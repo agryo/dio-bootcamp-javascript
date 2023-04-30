@@ -18,26 +18,37 @@ class Pessoa {
     }
 
     calcularImc(){
-        return this.peso / (this.altura * this.altura);
+        return (this.peso / (this.altura * this.altura)).toFixed(1);
     }
 
     classificarImc(){
-        if (this.calcularImc < 18,5){
-            console.log('Magreza = Você está muito magro!');
-        } else if ((this.calcularImc >= 18,5) && (this.calcularImc <= 24,9)){
-            console.log('Normal = Seu peso está normal.');
-        } else if (this.calcularImc >= 25 && this.calcularImc <= 29,9){
-            console.log('Sobrepeso = Você está ficando gordo.');
-        } else if (this.calcularImc >= 30 && this.calcularImc <= 39,9){
-            console.log('Obesidade = Você está muito gordo!');
+        if (this.calcularImc() < 18.5){
+            return 'Magreza = Você está muito magro!';
+        } else if (this.calcularImc() >= 18.5 && this.calcularImc() <= 24.9){
+            return 'Normal = Seu peso está normal.';
+        } else if (this.calcularImc() >= 25 && this.calcularImc() <= 29.9){
+            return 'Sobrepeso = Você está ficando gordo.';
+        } else if (this.calcularImc() >= 30 && this.calcularImc() <= 39.9){
+            return 'Obesidade = Você está muito gordo!';
         } else {
-            console.log('Obesidade GRAVE! = Procure AJUDA!');
+            return 'Obesidade GRAVE! = Procure AJUDA!';
         }
     }
 }
 
 const agryo = new Pessoa('Agryo', 83, 1.87);
+const ajr = new Pessoa('Alex Jr', 43, 1.72);
+const hjr = new Pessoa('Humberto Jr', 95, 1.77);
+const lelin = new Pessoa('Lelin', 180, 1.69);
 
-console.log(agryo.calcularImc());
+console.log(ajr.nome + ' está com o IMC: ' + ajr.calcularImc());
+console.log(ajr.classificarImc() + '\n');
 
-console.log(agryo.classificarImc());
+console.log(agryo.nome + ' está com o IMC: ' + agryo.calcularImc());
+console.log(agryo.classificarImc() + '\n');
+
+console.log(hjr.nome + ' está com o IMC: ' + hjr.calcularImc());
+console.log(hjr.classificarImc() + '\n');
+
+console.log(lelin.nome + ' está com o IMC: ' + lelin.calcularImc());
+console.log(lelin.classificarImc());
