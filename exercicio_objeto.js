@@ -11,11 +11,11 @@ class Carros {
     constructor (marca, cor, gastoMedioPorKm){
         this.marca = marca;
         this.cor = cor;
-        this.gastoMedioPorKm = gastoMedioPorKm;
+        this.gastoMedioPorKm = 1 / gastoMedioPorKm;
     }
 
     calcularValorGasto(distancia, preco){
-        return (distancia * (preco / this.gastoMedioPorKm)).toFixed(2);
+        return (distancia * this.gastoMedioPorKm * preco).toFixed(2);
     }
 }
 
