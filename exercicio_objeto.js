@@ -13,15 +13,16 @@ class Carros {
         this.cor = cor;
         this.gastoMedioPorKm = gastoMedioPorKm;
     }
+
+    calcularValorGasto(distancia, preco){
+        return (distancia * (preco / this.gastoMedioPorKm)).toFixed(2);
+    }
 }
 
-function calcularValorGasto(gastoMedioPorKm, preco){
-    return preco / gastoMedioPorKm;
-}
+const uno = new Carros('Fiat', 'Preto', 13);
+console.log(uno);
 
-const uno = new Carros('Fiat', 'Preto', 12);
-
-console.log('R$' + calcularValorGasto(uno.gastoMedioPorKm, 5.89).toFixed(2) + ' por Km.');
+console.log('Você vai gastar R$' + uno.calcularValorGasto(200, 5.89) + ' na viagem.');
 
 
 /*
