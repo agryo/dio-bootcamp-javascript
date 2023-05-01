@@ -1,6 +1,6 @@
 
 // 1) Crie um programa que dado um número imprima a sua tabuada.
-/* 
+/*
 //  Resolução abaixo
 const numero = 7;
 let resultado = 0;
@@ -9,7 +9,7 @@ for (let i = 0; i <= 10; i++) {
    console.log(i + ' x ' + numero + ' = ' + resultado);
 }
 //  Fim da resolução
-*/ 
+*/
 
 // 2) Crie um programa que seja capaz de percorrer uma lista de números e imprima cada número Par encontrado.
 /*
