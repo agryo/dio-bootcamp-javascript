@@ -75,6 +75,25 @@ if (resultado < 5) {
 */
 
 //  Resolução abaixo
-const notas = [1.6, 5.9, 8.9, 10, 8.1, 9.1];
-
+const notas = [2.9, 5.9, 8.9, 1.9, 8.1, 7.1, 10, 5.9, 2.9];
+function maiorNota(){
+   let maiorNota = 0;
+   for (let i = 0; i < notas.length; i++) {
+      if (maiorNota > notas[i]) {
+      } else {
+         maiorNota = notas[i];
+      }
+   }
+   return maiorNota;
+}
+function menorNota(){
+   let menorNota = 10;
+   for (let i = 0; i < notas.length; i++) {
+      if (menorNota > notas[i]) {
+         menorNota = notas[i];
+      }
+   }
+   return menorNota;
+}
+console.log('Entre as notas: '+ notas + '\nA maior é: ' + maiorNota() + ' e a menor é: ' + menorNota());
 //  Fim da resolução
