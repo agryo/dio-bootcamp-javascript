@@ -75,5 +75,22 @@ Código Condição de pagamento:
 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
 */
 // Inicio da resolução
-
+const condicaoPagamento = 4;
+const preco = 259.50;
+let total = 0;
+if (condicaoPagamento === 1) {
+   total = (preco * 0.9).toFixed(2);
+   console.log('Você escolheu Débito (10% de desconto).\nTotal a pagar: ' + total);
+} else if (condicaoPagamento === 2) {
+   total = (preco * 0.85).toFixed(2);
+   console.log('Você escolheu Dinhero ou PIX (15% de desconto).\nTotal a pagar: ' + total);
+} else if (condicaoPagamento === 3) {
+   total = (preco/2).toFixed(2);
+   console.log('Você escolheu parcelar em Duas Vezes.\nTotal a pagar: Duas de ' + total);
+} else if (condicaoPagamento === 4) {
+   total = (preco * 1.1).toFixed(2);
+   console.log('Você escolheu em mais de Duas Vezes.\nTotal a pagar: ' + total);
+} else {
+   console.log('Escolha uma opção de pagamento entre 1 e 4');
+}
 // Fim da resolução
