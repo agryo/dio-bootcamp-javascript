@@ -9,9 +9,23 @@ Classificação:
 - Média entre 5 e 7, recuperação;
 - Média acima de 7, passou de semestre;
 */
+/*
 // Inicio da resolução
+const nota1 = 5.9;
+const nota2 = 6.9;
+const nota3 = 9.1;
+const media = (nota1 + nota2 + nota3) / 3;
 
+if (media < 5) {
+   console.log('Você foi reprovado! Sua média foi: ' + media.toFixed(1));
+} else if ((media > 5) && (media < 7)) {
+   console.log('Você ficou em recuperação! Sua média foi: ' + media.toFixed(1));
+} else {
+   console.log('Parabéns!!! Você passou! Sua média foi: ' + media.toFixed(1));
+}
 // Fim da resolução
+*/
+
 /*
 2) O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde
    para dar uma indicação sobre a condição de peso de uma pessoa adulta. 
@@ -28,9 +42,26 @@ IMC em adultos Condição:
 - Entre 30 e 40 Obeso;
 - Acima de 40 Obsesidade Grave;
 */
+/*
 // Inicio da resolução
+const peso = 150.3;
+const altura = 1.87;
+const imc = ((peso / (altura * altura)).toFixed(1));
 
+if (imc < 18.5) {
+   console.log(imc + ' IMC - Você está abaixo do peso!');
+} else if ((imc > 18.5) && (imc < 25)) {
+   console.log(imc + ' IMC - Seu peso está normal.');
+} else if ((imc > 25) && (imc < 30)) {
+   console.log(imc + ' IMC - Você está acima do peso!');
+} else if ((imc > 30) && (imc < 40)) {
+   console.log(imc + ' IMC - Você está Obeso!');
+} else {
+   console.log(imc + ' IMC - Você está com Obesidade Grave!');
+}
 // Fim da resolução
+*/
+
 /*
 3) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando
    o preço normal de etiqueta e a escolha da condição de pagamento. 
