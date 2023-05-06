@@ -1,5 +1,5 @@
 /*
-2) Faça um programa que receba N quantidade de números e seus respectivos valores.
+2) Faça um programa que receba N quantidade de números e seus respectivos valores. Em seguida
 Imprima o maior número par e o menor número impar.
 
     Exemplo:
