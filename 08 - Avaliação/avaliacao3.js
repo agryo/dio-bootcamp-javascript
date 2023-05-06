@@ -19,3 +19,19 @@ Para calcular o percentual de imposto segue as aliquotas:
         Saída:
             2050.00
 */
+function calcularSalario(salario, adicional) {
+    let salarioFinal = 0;
+    if (salario <= 1100.00) {
+        salarioFinal = salario * 0.95;         
+    } else if ((salario >= 1100.01) && (salario <= 2500.00)) {
+        salarioFinal = salario * 0.9
+    } else {
+        salarioFinal = salario * 0.85;
+    }
+    return console.log(salarioFinal + adicional);
+}
+
+const salarioBruto = 2000;
+const beneficio = 250;
+
+calcularSalario(salarioBruto, beneficio);
